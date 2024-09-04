@@ -12,11 +12,9 @@
     <div class="container mt-5 ">
         <h2>Adjuntar nuevo  archivo</h2>
         <form method="POST">
-        {% csrf_token %}
-        <div class="form-group">
+            {% csrf_token %}
             {{form.as_p}}
-        </div>
-        <button type="submit" class="btn btn-primary">crear</button>
+            <button type="submit" class="btn btn-primary">crear</button>
         </form>
     </div>
     

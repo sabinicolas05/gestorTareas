@@ -8,9 +8,9 @@ def adjuntar(request):
         if form.is_valid():
             form.save()
             return redirect('listar')
-        form = TareaForm()
+    form = TareaForm()
     return render(request, 'adjuntar.html', {'form': form})
 
 def listar(request):
     tareas = Tarea.objects.all()
-    return render(request, 'listar.html', {'tarea': tareas})
+    return render(request, 'listar.html', {'tareas': tareas})
